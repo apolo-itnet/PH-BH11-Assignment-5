@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DevBoard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.9/daisyui.css" rel="stylesheet" type="text/css" />
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
+
+</head>
+<body id="body" class="bg-blue-50">
+
+  <header class="px-24 py-4">
+    <nav class="bg-base-100 p-4 flex items-center justify-between bg-white rounded-xl">
+      <div class="flex items-center gap-3">
+        <img src="assets/logo.png" alt="" class="w-8">
+        <h1 class="text-xl">Dev<span class=" text-2xl font-bold">Board</span></h1>
+      </div>
+
+      <div class="flex items-center gap-4">
+        <div class="flex items-center justify-center gap-2 bg-blue-50 px-4 py-2 rounded-full"> 
+        <img src="assets/checkbox.png" alt="" class="w-4">
+        <h1 id="" for="text" class="text-xl font-extrabold">24</h1>
+        </div  >
+        <button class="btn bg-white shadow-none border-none">
+          <img src="assets/theme-btn.png" alt="" class="bg-blue-50 p-2 rounded-full w-12"> 
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- main-dashboard -->
+  <section class="flex px-24 gap-4 pb-6">
+
+    <!-- task-board -->
+    <div class="flex-[3] bg-white rounded-xl p-6">
+      <div class="flex flex-col gap-4">
+
+        <!-- row-1 -->
+        <div  class="flex flex-row gap-4">
+          
+          <!-- 1st-part -->
+          <div class="flex-1 flex flex-row items-center bg-blue-50 p-6 rounded-xl gap-3">
+              <img src="assets/checkbox.png" alt="" class="w-4" >
+            <div class="flex flex-col w-full">
+              <p class="text-gray-700 font-semibold text-base">Task Assigned</p>
+              <span class="text-2xl font-extrabold">06</span>
+            </div>
+          </div>
+
+          <!-- 2nd-part -->
+          <div class="flex-[2] flex flex-row items-center p-6 gap-3 rounded-xl bg-linear-to-r from-indigo-700 from-0% via-indigo-600 via-50% to-indigo-500 to-100%">
+              <img src="assets/board.png" alt="" class="w-14">
+              <p class="text-white text-2xl font-medium">Discover Something New Today!</p>
+          </div>
+
+          <!-- 3rd-part -->
+          <div class="flex-1 flex flex-row items-center bg-blue-50 p-6 rounded-xl gap-4">
+            <img src="assets/calender.png" alt="">
+            <div>
+              <h1 id="day" class="text-base font-bold text-gray-800"></h1>
+              <h2 id="date" class="text-lg font-bold text-gray-800"></h2>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="border-dashed border w-full border-gray-200"></div>
+
+        <!-- row-2 (task) -->
+        <div class="grid grid-cols-3 gap-4">
+
+          <!-- task-1 -->
+          <div class=" gap-4 bg-blue-50 p-4 rounded-xl">
+            <button class="btn px-2 py-4  rounded-lg text-sm font-semibold text-gray-800 ">ShopEase</button>
+            <h1 id="task-heading-1" class="text-xl font-bold py-2">Fix Mobile Button Issue</h1>
+            <p class="m-1 p-3 bg-white rounded-md text-sm font-semibold text-gray-600 ">
+              the mobile button is not working properly.
+            </p>
+            <div class="border-dashed border w-full border-gray-300 mt-4"></div>
+            <div class="flex flex-row justify-between gap-4 mt-2">
+              <div>
+                <p class="font-semibold text-gray-600">Deadline</p>
+                <h2 class="font-bold">03 March 2025</h2>
+              </div>
+                <button id="task-btn-1" class="btn px-2 py-4 bg-indigo-600 rounded-lg text-sm font-semibold text-white">Completed</button>
+            </div>
+          </div>
+          
+          <!-- task-2 -->
+          <div class=" gap-4 bg-blue-50 p-4 rounded-xl">
+            <button class="btn px-2 py-4  rounded-lg text-sm font-semibold text-gray-800 ">CloudSync</button>
+            <h1 id="task-heading-2" class="text-xl font-bold py-2">Add Dark Mode</h1>
+            <p class="m-1 p-3 bg-white rounded-md text-sm font-semibold text-gray-600 ">
+              add dark mode to the application. this will improve user experience. 
+
+            </p>
+            <div class="border-dashed border w-full border-gray-300 mt-4"></div>
+            <div class="flex flex-row justify-between gap-4 mt-2">
+              <div>
+                <p class="font-semibold text-gray-600">Deadline</p>
+                <h2 class="font-bold">03 March 2025</h2>
+              </div>
+                <button id="task-btn-2" class="btn px-2 py-4 bg-indigo-600 rounded-lg text-sm font-semibold text-white">Completed</button>
+            </div>
+          </div>
+          
+          <!-- task-3 -->
+          <div class=" gap-4 bg-blue-50 p-4 rounded-xl">
+            <button class="btn px-2 py-4  rounded-lg text-sm font-semibold text-gray-800 ">SwiftPay</button>
+            <h1 id="task-heading-3" class="text-xl font-bold py-2">Optimize Home Page</h1>
+            <p class="m-1 p-3 bg-white rounded-md text-sm font-semibold text-gray-600 ">
+              the home page is not optimized for better user experience. we need to improve it. 
+            </p>
+            <div class="border-dashed border w-full border-gray-300 mt-4"></div>
+            <div class="flex flex-row justify-between gap-4 mt-2">
+              <div>
+                <p class="font-semibold text-gray-600">Deadline</p>
+                <h2 class="font-bold">03 March 2025</h2>
+              </div>
+                <button id="task-btn-3" class="btn px-2 py-4 bg-indigo-600 rounded-lg text-sm font-semibold text-white">Completed</button>
+            </div>
+          </div>
+
+          <!-- task-4 -->
+          <div class=" gap-4 bg-blue-50 p-4 rounded-xl">
+            <button class="btn px-2 py-4  rounded-lg text-sm font-semibold text-gray-800 ">Meta</button>
+            <h1 id="task-heading-4" class="text-xl font-bold py-2">Add new emoji 🤲</h1>
+            <p class="m-1 p-3 bg-white rounded-md text-sm font-semibold text-gray-600 ">
+              add new emoji to the application. this will improve user experience. 
+            </p>
+            <div class="border-dashed border w-full border-gray-300 mt-4"></div>
+            <div class="flex flex-row justify-between gap-4 mt-2">
+              <div>
+                <p class="font-semibold text-gray-600">Deadline</p>
+                <h2 class="font-bold">03 March 2025</h2>
+              </div>
+                <button id="task-btn-4" class="btn px-2 py-4 bg-indigo-600 rounded-lg text-sm font-semibold text-white">Completed</button>
+            </div>
+          </div>
+
+          <!-- task-5 -->
+          <div class=" gap-4 bg-blue-50 p-4 rounded-xl">
+            <button class="btn px-2 py-4  rounded-lg text-sm font-semibold text-gray-800 ">Google LLC</button>
+            <h1 id="task-heading-5" class="text-xl font-bold py-2">Integrate OpenAI API </h1>
+            <p class="m-1 p-3 bg-white rounded-md text-sm font-semibold text-gray-600 ">
+              integrate openai api to the application. this will improve user experience. 
+            </p>
+            <div class="border-dashed border w-full border-gray-300 mt-4"></div>
+            <div class="flex flex-row justify-between gap-4 mt-2">
+              <div>
+                <p class="font-semibold text-gray-600">Deadline</p>
+                <h2 class="font-bold">03 March 2025</h2>
+              </div>
+                <button id="task-btn-5" class="btn px-2 py-4 bg-indigo-600 rounded-lg text-sm font-semibold text-white">Completed</button>
+            </div>
+          </div>
+          
+          <!-- task-6 -->
+          <div class=" gap-4 bg-blue-50 p-4 rounded-xl">
+            <button class="btn px-2 py-4  rounded-lg text-sm font-semibold text-gray-800 ">Glassdoar</button>
+            <h1 id="task-heading-6" class="text-xl font-bold py-2">Improve Job searching </h1>
+            <p class="m-1 p-3 bg-white rounded-md text-sm font-semibold text-gray-600 ">
+              improve job searching feature in the application. this will improve user experience. 
+            </p>
+            <div class="border-dashed border w-full border-gray-300 mt-4"></div>
+            <div class="flex flex-row justify-between gap-4 mt-2">
+              <div>
+                <p class="font-semibold text-gray-600">Deadline</p>
+                <h2 class="font-bold">03 March 2025</h2>
+              </div>
+                <button id="task-btn-6" class="btn px-2 py-4 bg-indigo-600 rounded-lg text-sm font-semibold text-white">Completed</button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- History log -->
+    <div class="flex-[1] bg-white flex flex-col justify-start items-center rounded-xl">
+      <div class="flex flex-row py-2 gap-2 items-center justify-center mt-2">
+        <img src="assets/activity.png" alt="" class="w-4">
+        <h1 class="text-xl font-semibold text-gray-800">Activity Log</h1>
+      </div>
+      <button class="btn px-3 py-4 bg-indigo-600 rounded-lg text-base font-semibold text-white">Clear History</button>
+      <div class="border-dashed border w-full border-gray-200 mt-4"></div>
+    </div>
+  </section>
+  
+  <script src="script/script.js"></script>
+</body>
+</html>
