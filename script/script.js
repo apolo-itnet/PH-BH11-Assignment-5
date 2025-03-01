@@ -48,13 +48,14 @@ for (let i = 0; i < taskButtons.length; i++) {
       assignComplete.textContent = assignValue - 1;
     }
 
-    const currentTime = new Date().toLocaleTimeString('en-US', { hour: 'numeric', minute: 'numeric', second:'numeric', hour12: true });
-    const logText = "You have Complete the Task " + taskHeadings[i] + " at " + currentTime;
+    const addLog = document.getElementById('log-container');
 
-    const newLog = document.createElement('p');
-    newLog.textContent = logText;
-    newLog.className = 'text-sm text-gray-600 p-2 m-2 mb-2 rounded-lg bg-blue-50';
-    logContainer.appendChild(newLog);
+    const currentTime = new Date().toLocaleTimeString('en-US', { hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true });
+    const div = document.createElement('div');
+    div.innerHTML = `
+          <div> <p class="text-sm text-gray-600 p-2 m-2 mb-2 rounded-lg bg-blue-50"> You have Complete the Task <strong>  ${taskHeadings[i]} </strong> at ${currentTime} </p> </div> `;
+
+    addLog.appendChild(div);
 
     taskButtons[i].disabled = true;
 
