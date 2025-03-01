@@ -30,43 +30,208 @@
   </header>
 
   <!-- Accordian-dashboard -->
-  <section class="flex flex-col px-24 gap-4 pb-6">
+  <section class="flex flex-col px-24 gap-4 pb-6 min-h-screen">
 
     <h1 class="text-center font-bold text-2xl">Blogs</h1>
 
     <!-- Qus-1 -->
     <div class="collapse bg-base-100 border border-base-300">
+      
       <input type="radio" name="my-accordion-1" checked="checked" />
       <div class="collapse-title font-semibold">What are the different ways to select an element in the DOM?</div>
-      <div class="collapse-content text-sm">Click the "Sign Up" button in the top right corner and follow the registration process.</div>
+
+      <div class="collapse-content text-sm">
+        <ul class="flex justify-start items-center">
+          <div class="overflow-x-auto">
+            <table class="table">
+              <!-- head -->
+              <thead> 
+                <tr> 
+                  <th class="text-base font-bold" colspan="3">  DOM-এ এলিমেন্ট সিলেক্ট করার উপায় :</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- row 1 -->
+                <tr class="hover:bg-base-300 text-base">
+                  <th>1</th>
+                  <td>ID ব্যবহার করে</td>
+                  <td>:</td>
+                  <td>document.getElementById("id")</td>
+                </tr>
+                <!-- row 2 -->
+                <tr class="hover:bg-base-300 text-base">
+                  <th>2</th>
+                  <td>Class ব্যবহার করে</td>
+                  <td>:</td>
+                  
+                  <td>document.getElementsByClassName("class")</td>
+                </tr>
+                <!-- row 3 -->
+                <tr class="hover:bg-base-300 text-base">
+                  <th>3</th>
+                  <td>Tag ব্যবহার করে</td>
+                  <td>:</td>
+                  <td>document.getElementsByTagName("tag")</td>
+                </tr>
+                <!-- row 4 -->
+                <tr class="hover:bg-base-300 text-base">
+                  <th>4</th>
+                  <td>Single Selector ব্যবহার করে </td>
+                  <td>:</td>
+                  <td>document.querySelector("selector")</td>
+                </tr>
+                <!-- row 5 -->
+                <tr class="hover:bg-base-300 text-base">
+                  <th>5</th>
+                  <td>All Selector ব্যবহার করে </td>
+                  <td>:</td>
+                  <td>document.querySelectorAll("selector")</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </ul>
+      </div>
+
     </div>
 
     <!-- Qus-2 -->
     <div class="collapse bg-base-100 border border-base-300">
       <input type="radio" name="my-accordion-1" />
       <div class="collapse-title font-semibold">What is the difference between innerHTML, innerText, and textContent ?</div>
-      <div class="collapse-content text-sm">Click on "Forgot Password" on the login page and follow the instructions sent to your email.</div>
+
+      <div class="collapse-content text-sm">
+        <ul class="flex justify-start items-center">
+          <div class="overflow-x-auto">
+            <table class="table">
+              <!-- head -->
+              <thead> 
+                <tr> 
+                  <th class="font-bold text-base" colspan="5"> The Difference of innerHTML, innerText, and textContent</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- row 1 -->
+                <tr class="hover:bg-base-300 text-base">
+                  <th>#</th>
+                  <th>Property</th>
+                  <th>Explain</th>
+                  <th>HTML Process or not?</th>
+                  <th>Hidden Text read or not?</th>
+                </tr>
+                <tr class="hover:bg-base-300 text-base">
+                  <th>1</th>
+                  <td >innerHTML</td>
+                  <td>এলিমেন্টের ভেতরের HTML কোড (ট্যাগসহ) দেয় বা সেট করে।</td>
+                  <td>✅ Yes</td>
+                  <td>✅ Yes</td>
+                </tr>
+                <!-- row 2 -->
+                <tr class="hover:bg-base-300 text-base">
+                  <th>2</th>
+                  <td >innerText</td>
+                  <td>শুধু দৃশ্যমান টেক্সট দেয়, ট্যাগ বা স্ক্রিপ্ট বাদ দিয়ে।</td>
+                  <td>❌ No</td>
+                  <td>❌ No</td>
+                </tr>
+                <!-- row 3 -->
+                <tr class="hover:bg-base-300 text-base">
+                  <th>3</th>
+                  <td >textContent</td>
+                  <td>সব টেক্সট দেয় (লুকানো বা স্ক্রিপ্টসহ), ট্যাগ ছাড়া।</td>
+                  <td>❌ No</td>
+                  <td>✅ Yes</td>
+                </tr>
+              </tbody>
+            </table>
+            
+            
+          </div>
+        </ul>
+      </div>
+
     </div>
 
     <!-- Qus-3 -->
     <div class="collapse bg-base-100 border border-base-300">
       <input type="radio" name="my-accordion-1" />
       <div class="collapse-title font-semibold"> What is event delegation in the DOM?</div>
-      <div class="collapse-content text-sm">Go to "My Account" settings and select "Edit Profile" to make changes.</div>
+      <div class="collapse-content text-base "> <span class="font-bold">Event Delegation :</span> DOM (Document Object Model)-এ একটি Parent Element এ addEventListner যোগ করে Child Element এর Event কে ধরা। এতে প্রতিটি Child এর জন্য আলাদা addEventListner যুক্ত করা লাগে না।</div>
     </div>
 
     <!-- Qus-4 -->
     <div class="collapse bg-base-100 border border-base-300">
       <input type="radio" name="my-accordion-1" />
       <div class="collapse-title font-semibold">What is event bubbling in the DOM?</div>
-      <div class="collapse-content text-sm">Go to "My Account" settings and select "Edit Profile" to make changes.</div>
+      <div class="collapse-content text-base "> <span class="font-bold">Event Bubbling :</span> DOM (Document Object Model)-এ DOM-এ event child element থেকে parent element এর দিকে ছড়িয়ে পড়ে।</div>
     </div>
 
     <!-- Qus-5 -->
     <div class="collapse bg-base-100 border border-base-300">
       <input type="radio" name="my-accordion-1" />
       <div class="collapse-title font-semibold">How do you create, add, and remove elements using JavaScript? </div>
-      <div class="collapse-content text-sm">Go to "My Account" settings and select "Edit Profile" to make changes.</div>
+      <div class="collapse-content text-sm">
+        <ul class="flex justify-start items-center">
+          <div class="overflow-x-auto">
+            <table class="table">
+              <!-- head -->
+              <thead> 
+                <tr> 
+                  <th class="font-bold text-base" colspan="4">
+                    <span class="font-bold">Create, Add, Remove Elements</span>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Table Head -->
+                <tr class="hover:bg-base-300 text-base">
+                  <th>#</th>
+                  <th>Process</th>
+                  <th>Method</th>
+                  <th>Explain</th>
+                </tr>
+                 <!-- row 1 -->
+                <tr class="hover:bg-base-300 text-base">
+                  <th>1</th>
+                  <td>Create Element</td>
+                  <td><code>let div = document.createElement("div")</code></td>
+                  <td>এটি একটি নতুন HTML এলিমেন্ট (যেমন div) তৈরি করে, যা পরে কাস্টমাইজ করা যায়।</td>
+                </tr>
+                <!-- row 2 -->
+                <tr class="hover:bg-base-300 text-base">
+                  <th>2</th>
+                  <td>Add Element</td>
+                  <td><code>parentElement.prepend(div)</code></td>
+                  <td>এটি প্যারেন্টের শুরুতে এলিমেন্ট যোগ করে।</td>
+                  
+                </tr>
+                <!-- row 2.1 -->
+                <tr class="hover:bg-base-300 text-base">
+                  <th></th>
+                  <td></td>
+                  <td><code>document.body.append(div)</code></td>
+                  <td>এটি তৈরি করা এলিমেন্টকে পেজের body-তে শেষে যোগ করে।</td>
+                </tr>
+                <!-- row 3 -->
+                <tr class="hover:bg-base-300 text-base">
+                  <th>3</th>
+                  <td>Remove Element</td>
+                  <td><code>div.remove()</code></td>
+                  <td>এটি সরাসরি এলিমেন্টটিকে DOM থেকে মুছে ফেলে।</td>
+                  
+                </tr>
+                <!-- row 3.1 -->
+                <tr class="hover:bg-base-300 text-base">
+                  <th></th>
+                  <td></td>
+                  <td><code>parentElement.removeChild(div)</code></td>
+                  <td>প্যারেন্ট থেকে নির্দিষ্ট চাইল্ড এলিমেন্টটি সরায়।</td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+        </ul>
+      </div>
     </div>
 
   </section>
