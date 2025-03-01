@@ -15,7 +15,7 @@
 </head>
 <body id="body" class="bg-blue-50">
 
-  <header class="px-24 py-4">
+  <header class=" px-4 lg:px-24 py-4">
     <nav class="bg-base-100 p-4 flex items-center justify-between bg-white rounded-xl">
       <a href="index.html" class="flex items-center gap-3">
         <img src="assets/logo.png" alt="" class="w-8">
@@ -24,7 +24,7 @@
 
       <div class="flex items-center gap-4">
         <div class="flex items-center justify-center gap-2 bg-blue-50 px-4 py-2 rounded-full"> 
-        <img src="assets/checkbox.png" alt="" class="w-4">
+        <img src="assets/checkbox.png" alt="" class="w-6 lg:w-4">
         <h1 id="nav-add-task" for="text" class="text-xl font-extrabold">24</h1>
         </div  >
         <button id="theme-toggle-btn" class="btn bg-white shadow-none border-none">
@@ -35,18 +35,18 @@
   </header>
 
   <!-- main-dashboard -->
-  <section class="flex px-24 gap-4 pb-6">
+  <section class="flex flex-col lg:flex-row px-4 lg:px-24 gap-4 pb-6">
 
     <!-- task-board -->
-    <div class="flex-[3] bg-white rounded-xl p-6">
+    <div class=" flex-1 md:flex-[2]  lg:flex-[3] bg-white rounded-xl p-6">
       <div class="flex flex-col gap-4">
 
         <!-- row-1 -->
-        <div  class="flex flex-row gap-4">
+        <div  class="flex flex-col sm:flex-row gap-4">
           
           <!-- assigned-part -->
           <div id="task-assigned" class="flex-1 flex flex-row items-center bg-blue-50 p-6 rounded-xl gap-3">
-              <img src="assets/checkbox.png" alt="" class="w-4" >
+              <img src="assets/checkbox.png" alt="" class="lg:w-6 md:w-6 w-8" >
             <div class="flex flex-col w-full">
               <p class="text-gray-700 font-semibold text-base">Task Assigned</p>
               <span id="assign-complete" class="text-2xl font-extrabold"></span>
@@ -73,10 +73,10 @@
         <div class="border-dashed border w-full border-gray-200"></div>
 
         <!-- row-2 (task) -->
-        <div class="grid grid-cols-3 gap-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
 
           <!-- task-1 -->
-          <div class=" task-card gap-4 bg-blue-50 p-4 rounded-xl group ">
+          <div class="task-card gap-4 bg-blue-50 p-4 rounded-xl shadow-md">
             <button class="btn px-2 py-4  rounded-lg text-sm font-semibold text-gray-800 ">ShopEase</button>
             <h1 id="task-heading-1" class="text-xl font-bold py-2">Fix Mobile Button Issue</h1>
             <p class="para-details m-1 p-3 bg-white rounded-md text-sm font-semibold text-gray-600 h-20">
@@ -93,7 +93,7 @@
           </div>
           
           <!-- task-2 -->
-          <div class=" task-card gap-4 bg-blue-50 p-4 rounded-xl">
+          <div class="task-card gap-4 bg-blue-50 p-4 rounded-xl shadow-md">
             <button class="btn px-2 py-4  rounded-lg text-sm font-semibold text-gray-800 ">CloudSync</button>
             <h1 id="task-heading-2" class="text-xl font-bold py-2">Add Dark Mode</h1>
             <p class="para-details m-1 p-3 bg-white rounded-md text-sm font-semibold text-gray-600 h-20 ">
@@ -111,7 +111,7 @@
           </div>
           
           <!-- task-3 -->
-          <div class=" task-card gap-4 bg-blue-50 p-4 rounded-xl">
+          <div class="task-card gap-4 bg-blue-50 p-4 rounded-xl shadow-md">
             <button class="btn px-2 py-4  rounded-lg text-sm font-semibold text-gray-800 ">SwiftPay</button>
             <h1 id="task-heading-3" class="text-xl font-bold py-2">Optimize Home Page</h1>
             <p class="para-details m-1 p-3 bg-white rounded-md text-sm font-semibold text-gray-600 h-20 ">
@@ -128,7 +128,7 @@
           </div>
 
           <!-- task-4 -->
-          <div class=" task-card gap-4 bg-blue-50 p-4 rounded-xl">
+          <div class="task-card gap-4 bg-blue-50 p-4 rounded-xl shadow-md">
             <button class="btn px-2 py-4  rounded-lg text-sm font-semibold text-gray-800 ">Meta</button>
             <h1 id="task-heading-4" class="text-xl font-bold py-2">Add new emoji 🤲</h1>
             <p class="para-details m-1 p-3 bg-white rounded-md text-sm font-semibold text-gray-600 h-20 ">
@@ -145,7 +145,7 @@
           </div>
 
           <!-- task-5 -->
-          <div class=" task-card gap-4 bg-blue-50 p-4 rounded-xl">
+          <div class="task-card gap-4 bg-blue-50 p-4 rounded-xl shadow-md">
             <button class="btn px-2 py-4  rounded-lg text-sm font-semibold text-gray-800 ">Google LLC</button>
             <h1 id="task-heading-5" class="text-xl font-bold py-2">Integrate OpenAI API </h1>
             <p class="para-details m-1 p-3 bg-white rounded-md text-sm font-semibold text-gray-600 h-20 ">
@@ -162,7 +162,7 @@
           </div>
           
           <!-- task-6 -->
-          <div class=" task-card gap-4 bg-blue-50 p-4 rounded-xl">
+          <div class="task-card gap-4 bg-blue-50 p-4 rounded-xl shadow-md">
             <button class="btn px-2 py-4  rounded-lg text-sm font-semibold text-gray-800 ">Glassdoar</button>
             <h1 id="task-heading-6" class="text-xl font-bold py-2">Improve Job searching </h1>
             <p class="para-details m-1 p-3 bg-white rounded-md text-sm font-semibold text-gray-600 h-20 ">

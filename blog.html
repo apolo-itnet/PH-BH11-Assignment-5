@@ -15,7 +15,7 @@
 </head>
 <body id="body" class="bg-blue-50">
 
-  <header class="px-24 py-4">
+  <header class="px-4 lg:px-24 py-4">
     <nav class="bg-base-100 p-4 flex items-center justify-between bg-white rounded-xl">
       <a href="index.html" class="flex items-center gap-3">
         <img src="assets/logo.png" alt="" class="w-8">
@@ -30,7 +30,7 @@
   </header>
 
   <!-- Accordian-dashboard -->
-  <section class="flex flex-col px-24 gap-4 pb-6 min-h-screen">
+  <section class="flex flex-col px-4 lg:px-24 gap-4 pb-6 min-h-screen">
 
     <h1 class="text-center font-bold text-2xl">Blogs</h1>
 
@@ -40,14 +40,14 @@
       <input type="radio" name="my-accordion-1" checked="checked" />
       <div class="collapse-title font-semibold">What are the different ways to select an element in the DOM?</div>
 
-      <div class="collapse-content text-sm">
+      <div class="collapse-content text-sm overflow-y-auto">
         <ul class="flex justify-start items-center">
           <div class="overflow-x-auto">
             <table class="table">
               <!-- head -->
               <thead> 
                 <tr> 
-                  <th class="text-base font-bold" colspan="3">  DOM-এ এলিমেন্ট সিলেক্ট করার উপায় :</th>
+                  <th class="text-base font-bold" colspan="3">  DOM-এ এলিমেন্ট সিলেক্ট করার উপায় : </th>
                 </tr>
               </thead>
               <tbody>
@@ -100,10 +100,10 @@
       <input type="radio" name="my-accordion-1" />
       <div class="collapse-title font-semibold">What is the difference between innerHTML, innerText, and textContent ?</div>
 
-      <div class="collapse-content text-sm">
-        <ul class="flex justify-start items-center">
+      <div class="collapse-content text-sm overflow-y-auto">
+        <ul class="flex items-center">
           <div class="overflow-x-auto">
-            <table class="table">
+            <table class="table w-full">
               <!-- head -->
               <thead> 
                 <tr> 
@@ -111,7 +111,7 @@
                 </tr>
               </thead>
               <tbody>
-                <!-- row 1 -->
+                <!-- row head -->
                 <tr class="hover:bg-base-300 text-base">
                   <th>#</th>
                   <th>Property</th>
@@ -119,6 +119,7 @@
                   <th>HTML Process or not?</th>
                   <th>Hidden Text read or not?</th>
                 </tr>
+                <!-- row 1 -->
                 <tr class="hover:bg-base-300 text-base">
                   <th>1</th>
                   <td >innerHTML</td>
@@ -156,21 +157,21 @@
     <div class="collapse bg-base-100 border border-base-300">
       <input type="radio" name="my-accordion-1" />
       <div class="collapse-title font-semibold"> What is event delegation in the DOM?</div>
-      <div class="collapse-content text-base "> <span class="font-bold">Event Delegation :</span> DOM (Document Object Model)-এ একটি Parent Element এ addEventListner যোগ করে Child Element এর Event কে ধরা। এতে প্রতিটি Child এর জন্য আলাদা addEventListner যুক্ত করা লাগে না।</div>
+      <div class="collapse-content text-ba overflow-y-autose "> <span class="font-bold">Event Delegation :</span> DOM (Document Object Model)-এ একটি Parent Element এ addEventListner যোগ করে Child Element এর Event কে ধরা। এতে প্রতিটি Child এর জন্য আলাদা addEventListner যুক্ত করা লাগে না।</div>
     </div>
 
     <!-- Qus-4 -->
     <div class="collapse bg-base-100 border border-base-300">
       <input type="radio" name="my-accordion-1" />
       <div class="collapse-title font-semibold">What is event bubbling in the DOM?</div>
-      <div class="collapse-content text-base "> <span class="font-bold">Event Bubbling :</span> DOM (Document Object Model)-এ DOM-এ event child element থেকে parent element এর দিকে ছড়িয়ে পড়ে।</div>
+      <div class="collapse-content text-ba overflow-y-autose "> <span class="font-bold">Event Bubbling :</span> DOM (Document Object Model)-এ DOM-এ event child element থেকে parent element এর দিকে ছড়িয়ে পড়ে।</div>
     </div>
 
     <!-- Qus-5 -->
     <div class="collapse bg-base-100 border border-base-300">
       <input type="radio" name="my-accordion-1" />
       <div class="collapse-title font-semibold">How do you create, add, and remove elements using JavaScript? </div>
-      <div class="collapse-content text-sm">
+      <div class="collapse-content text-sm overflow-y-auto">
         <ul class="flex justify-start items-center">
           <div class="overflow-x-auto">
             <table class="table">

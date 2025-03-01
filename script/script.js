@@ -28,14 +28,14 @@ const assignComplete = document.getElementById('assign-complete');
 const logContainer = document.getElementById('log-container');
 
 let taskCount = 0;
-const totalTask = taskButtons.length;
+const totalTask = taskHeadings.length;
 
 for (let i = 0; i < taskButtons.length; i++) {
   taskButtons[i].onclick = function(){
     taskCount++;
 
     alert('Board updated Successfully');
-    
+
     if (taskCount === totalTask) {
       alert('congrats!!! You have completed all the current task')
     } 
