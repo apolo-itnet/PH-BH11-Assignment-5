@@ -48,14 +48,9 @@ for (let i = 0; i < taskButtons.length; i++) {
       assignComplete.textContent = assignValue - 1;
     }
 
-    const logContainer = document.getElementById('log-container');
-      if (!logContainer) {
-        console.error("logContainer not found in the document!");
-      }
-
-
     const currentTime = new Date().toLocaleTimeString('en-US', { hour: 'numeric', minute: 'numeric', second:'numeric', hour12: true });
     const logText = "You have Complete the Task " + taskHeadings[i] + " at " + currentTime;
+
     const newLog = document.createElement('p');
     newLog.textContent = logText;
     newLog.className = 'text-sm text-gray-600 p-2 m-2 mb-2 rounded-lg bg-blue-50';
@@ -66,7 +61,16 @@ for (let i = 0; i < taskButtons.length; i++) {
   }
 }
 
-const clearButton = document.getElementById('clear-btn');
-clearButton.onclick = function(){
-  logContainer.innerHTML = '';
-};
+document.getElementById('clear-btn').addEventListener('click', function(){
+  logContainer.innerHTML = " ";
+})
+
+document.getElementById('discover-to-blog-page').addEventListener('click', function(){
+  window.location.href = 'blog.html';
+});
+
+
+document.getElementById('theme-toggle-btn').addEventListener('click', function(){
+  const randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
+  document.body.style.backgroundColor = randomColor;
+});
