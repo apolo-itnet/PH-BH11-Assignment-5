@@ -1,14 +1,8 @@
 // day and date update function 
 
 const now = new Date();
-const day = now.toLocaleString('en-US', { weekday: 'short'});
-const date = now.toLocaleString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
-
-document.getElementById('day').textContent=day ;
-document.getElementById('date').textContent=date ;
-
-
-
+document.getElementById('day').textContent = now.toLocaleString('en-US', { weekday: 'short' });
+document.getElementById('date').textContent = now.toLocaleString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
 
 
 const taskButtons = [
@@ -19,6 +13,7 @@ const taskButtons = [
   document.getElementById('task-btn-5'),
   document.getElementById('task-btn-6'),
 ];
+
 const taskHeadings = [
   document.getElementById('task-heading-1').textContent,
   document.getElementById('task-heading-2').textContent,
@@ -27,6 +22,7 @@ const taskHeadings = [
   document.getElementById('task-heading-5').textContent,
   document.getElementById('task-heading-6').textContent,
 ];
+
 const navAddTask = document.getElementById('nav-add-task');
 const assignComplete = document.getElementById('assign-complete');
 const logContainer = document.getElementById('log-container');
@@ -39,6 +35,7 @@ for (let i = 0; i < taskButtons.length; i++) {
     taskCount++;
 
     alert('Board updated Successfully');
+    
     if (taskCount === totalTask) {
       alert('congrats!!! You have completed all the current task')
     } 
