@@ -8,6 +8,9 @@ document.getElementById('day').textContent=day ;
 document.getElementById('date').textContent=date ;
 
 
+
+
+
 const taskButtons = [
   document.getElementById('task-btn-1'),
   document.getElementById('task-btn-2'),
@@ -62,6 +65,8 @@ for (let i = 0; i < taskButtons.length; i++) {
   }
 }
 
+
+
 document.getElementById('clear-btn').addEventListener('click', function(){
   logContainer.innerHTML = " ";
 })
@@ -75,3 +80,12 @@ document.getElementById('theme-toggle-btn').addEventListener('click', function()
   const randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
   document.body.style.backgroundColor = randomColor;
 });
+
+
+// task count update function
+function updateTaskCount() {
+  const taskCards = document.querySelectorAll('.task-card');
+  assignComplete.textContent = taskCards.length;
+}
+
+updateTaskCount(); 
